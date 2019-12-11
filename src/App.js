@@ -6,6 +6,8 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
+import {setUpdatedPrice} from './reducers/carActions';
+
 const App = props => {
   // const state = {
   //   additionalPrice: 0,

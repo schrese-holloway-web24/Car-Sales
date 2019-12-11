@@ -17,7 +17,17 @@ export const initialState = {
   };
 
   export const carReducer = (state = initialState, action) => {
+    //   console.log('from carReducer.js', state, action)
       switch(action.type) {
+        case "UPDATE_PRICE":
+            return {
+                ...state, 
+                additionalPrice: state.additionalPrice + action.payload,
+                car: {
+                    ...state.car, 
+                    features: [state.car.features, action.payload]
+                }
+            }
         default:
             return state;
       }
