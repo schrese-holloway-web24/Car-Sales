@@ -1,6 +1,6 @@
-export const UPDATE_PRICE = "UPDATE_PRICE";
-export const UPDATE_FEATURES = "UPDATE_FEATURES"
+export const ADDING_FEATURE = "ADDING_FEATURE";
+// export const UPDATE_FEATURES = "UPDATE_FEATURES"
 
-export const setUpdatedPrice = (state) => {
-    return {type: UPDATE_PRICE, payload: state }
+export const add = state => {
+    return {type: ADDING_FEATURE, payload: state }
 }
