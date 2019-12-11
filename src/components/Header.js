@@ -1,3 +1,4 @@
+//displays the top of the users choice card
 import React from 'react';
 
 const Header = props => {

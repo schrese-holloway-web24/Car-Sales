@@ -1,3 +1,4 @@
+//displays features added to the users card (on the left)
 import React from 'react';
 
 const AddedFeature = props => {

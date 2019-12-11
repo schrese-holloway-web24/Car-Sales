@@ -1,3 +1,4 @@
+//displays added features for users card (on left)
 import React from 'react';
 
 import AddedFeature from './AddedFeature';

@@ -1,3 +1,4 @@
+//displays options for the user to add to their car (right card)
 import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
 

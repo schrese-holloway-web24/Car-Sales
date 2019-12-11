@@ -1,3 +1,4 @@
+//displays the total amount of the car plus the additional features cost (right card)
 import React from 'react';
 
 const Total = props => {

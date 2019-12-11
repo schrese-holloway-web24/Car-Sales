@@ -1,3 +1,4 @@
+//displays each individual option the user has to add to their car(right card)
 import React from 'react';
 
 const AdditionalFeature = props => {

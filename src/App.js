@@ -34,10 +34,12 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
+        {/* this is the left side(with the car image) */}
         <Header car={state.car} />
         <AddedFeatures car={state.car} />
       </div>
       <div className="box">
+        {/* this is the right side(with the add buttons) */}
         <AdditionalFeatures additionalFeatures={state.additionalFeatures} />
         <Total car={state.car} additionalPrice={state.additionalPrice} />
       </div>
