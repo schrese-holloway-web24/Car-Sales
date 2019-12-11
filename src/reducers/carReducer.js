@@ -26,7 +26,11 @@ export const initialState = {
                 car: {
                     ...state.car, 
                     features: [state.car.features, action.payload]
-                }
+                },
+                additionalFeatures: [
+                    
+                ]
+
             }
         default:
             return state;

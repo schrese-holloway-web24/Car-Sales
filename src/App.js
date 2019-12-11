@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {setUpdatedPrice} from './reducers/carActions';
+
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-
-import {setUpdatedPrice} from './reducers/carActions';
 
 const App = props => {
   // const state = {
@@ -32,6 +32,7 @@ const App = props => {
 
   const buyItem = item => {
     // dipsatch an action here to add an item
+    props.setUpdatedPrice(item)
   };
 
   return (
@@ -43,7 +44,7 @@ const App = props => {
       </div>
       <div className="box">
         {/* this is the right side(with the add buttons) */}
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
+        <AdditionalFeatures additionalFeatures={props.additionalFeatures} setUpdatedPrice = {buyItem}/>
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -60,4 +61,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, {setUpdatedPrice})(App);
