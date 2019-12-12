@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const AdditionalFeature = props => {
+console.log(props);
 
   return (
     <li>
@@ -14,4 +15,5 @@ const AdditionalFeature = props => {
   );
 };
 
-export default connect(null, {})(AdditionalFeature);
+// export default connect(null, {})(AdditionalFeature);
+export default AdditionalFeature

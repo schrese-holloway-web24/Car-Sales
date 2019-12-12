@@ -2,7 +2,8 @@ import {ADDING_FEATURE} from './carActions';
 export const initialState = {
     additionalPrice: 0,
     car: {
-      price: 26395,
+    //   price: 26395,
+      price: 0,
       name: '2019 Ford Mustang',
       image:
         'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
@@ -22,12 +23,12 @@ export const initialState = {
         case ADDING_FEATURE:
             return {
                 ...state, 
-                // additionalPrice: state.additionalPrice + action.payload,
+                additionalPrice: state.additionalPrice += action.payload.price,
                 car: {
                     ...state.car, 
-                    features: [state.car.features, action.payload]
+                    features: [...state.car.features, action.payload]
                 },
-                additionalFeatures: state.additionalFeatures.filter(i => i.id !== action.payload.id)
+                additionalFeatures: state.additionalFeatures.filter(i => i.id !== action.payload.id),
             }
         default:
             return state;
