@@ -29,7 +29,7 @@ export const initialState = {
                     ...state.car, 
                     features: [...state.car.features, action.payload]
                 },
-                additionalFeatures: state.additionalFeatures.filter(a => a.id !== action.payload.id),
+                additionalFeatures: state.additionalFeatures.filter(a => a !== action.payload),
             }
         case REMOVING_FEATURE: 
             return {
@@ -37,8 +37,8 @@ export const initialState = {
                 additionalPrice: state.additionalPrice -= action.payload.price,
                 car: {
                     ...state.car,
-                    // features: state.car.features.filter(r => r.id === action.payload.id)
-                    features: state.car.features.filter(r => console.log(r))
+                    features: state.car.features.filter(r => r !== action.payload)
+                    // features: state.car.features.filter(r => console.log(r.id, action.payload.id))
                 },
                 additionalFeatures: [...state.additionalFeatures, action.payload]
             }

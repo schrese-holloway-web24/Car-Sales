@@ -2,7 +2,7 @@
 import React from 'react';
 
 const AdditionalFeature = props => {
-console.log(props);
+console.log('right side', props);
 
   return (
     <li>
