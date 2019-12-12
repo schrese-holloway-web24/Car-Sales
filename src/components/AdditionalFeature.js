@@ -1,13 +1,16 @@
+//displays each individual option the user has to add to their car(right card)
 import React from 'react';
 
 const AdditionalFeature = props => {
+console.log('right side', props);
+
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button">Add</button>
+      <button onClick = {() => props.add(props.feature)} className="button">Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );
 };
 
-export default AdditionalFeature;
+export default AdditionalFeature

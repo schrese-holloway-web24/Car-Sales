@@ -1,3 +1,4 @@
+//displays the top of the users choice card
 import React from 'react';
 
 const Header = props => {
@@ -7,7 +8,7 @@ const Header = props => {
         <img src={props.car.image} alt={props.car.name} />
       </figure>
       <h2>{props.car.name}</h2>
-      <p>Amount: ${props.car.price}</p>
+      <p>Amount: ${props.car.price + props.additionalPrice}</p>
     </>
   );
 };
