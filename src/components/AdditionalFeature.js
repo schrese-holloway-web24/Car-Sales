@@ -1,8 +1,6 @@
 //displays each individual option the user has to add to their car(right card)
 import React from 'react';
 
-import { connect } from 'react-redux';
-
 const AdditionalFeature = props => {
 console.log(props);
 
@@ -15,5 +13,4 @@ console.log(props);
   );
 };
 
-// export default connect(null, {})(AdditionalFeature);
 export default AdditionalFeature
